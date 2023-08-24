@@ -55,5 +55,12 @@
     "sml": "cd $dir && sml $fileName"
   },
 "emmet.showSuggestionsAsSnippets": true,
-"emmet.includeLanguages": {"html.erb": "html", "erb": "html"}
+"emmet.includeLanguages": {"html.erb": "html", "erb": "html"},
+"[erb]": {
+  "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+  "editor.formatOnSave": true
+},
+"files.associations": {
+  "*.html.erb": "erb"
+}
 }

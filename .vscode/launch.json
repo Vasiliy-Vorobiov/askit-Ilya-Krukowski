@@ -11,6 +11,31 @@
       "script": "${workspaceRoot}/bin/rails s",
       "useBundler": false,
       "command": "ruby"
+    },
+
+    // добавить gem "foreman" в Gemfile в группу development
+    //
+    //  создать файл в корн папке проекта debug_with_rdbg.rb:
+    // 
+    // begin
+    //   # system('bin/dev')
+    //   system('exec foreman start -f Procfile_rdbg.dev "$@"')
+    // rescue => e
+    //   puts "loading error: #{e}"
+    // end    
+
+    // создать файл в корн папке проекта Procfile_rdbg.dev:
+    //
+    // web: unset PORT && env RUBY_DEBUG_OPEN=true rdbg -O -n -c "bin/rails server"
+    // js: yarn build --watch
+    // css: yarn watch:css
+    {
+      "type": "rdbg",
+      "name": "bin/dev with rdbg",
+      "request": "launch",
+      "script": "${workspaceRoot}/debug_with_rdbg.rb",
+      "useBundler": false,
+      "command": "ruby"
     }, 
     {
       "name": "Rails server",

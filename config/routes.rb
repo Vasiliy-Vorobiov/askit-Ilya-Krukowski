@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # resources :questions, only: %i[index new edit create update destroy show]
   # сегенерированы все методы
   resources :questions do
-    resources :answers, only: %i[create destroy]
+    # resources :answers, only: %i[create destroy]
+    resources :answers, except: %i[create destroy]
   end
 
   # get '/questions', to: 'questions#index'

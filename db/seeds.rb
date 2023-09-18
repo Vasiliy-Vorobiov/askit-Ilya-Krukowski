@@ -8,11 +8,10 @@
 
 30.times do
   #=> "Pour-over swag godard."
-  title = Faker::Hipster.sentence(word_count: 3) 
+  title = Faker::Hipster.sentence(word_count: 3)
 
   #=> "Vomito unde uxor annus. Et patior utilis sursum."
-  body = Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4)
+  body = Faker::Lorem.paragraph(sentence_count: 5, supplemental: true, random_sentences_to_add: 4)
 
-  question = Question.create title: title, body: body
-  
+  Question.create title: title, body: body
 end

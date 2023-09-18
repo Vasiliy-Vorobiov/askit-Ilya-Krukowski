@@ -51,7 +51,7 @@ class QuestionsController < ApplicationController
   def show
     @answer = @question.answers.build
     # 3 способа:
-    @answers = @question.answers.order(created_at: 'DESC')
+    @answers = @question.answers.order(created_at: 'DESC').page(params[:page]).per(5)
     # @answers = Answer.where(question_id: params[:id]).order created_at: 'DESC'
     # @answers = Answer.where(question: @question).order created_at: 'DESC'
   end

@@ -1,10 +1,10 @@
 <% provide :page_title, 'Questions' %>
 <% currently_at 'Questions'%>
 <h1 class="mb-4">Questions</h1>
-<%= link_to 'new question', new_question_path, class: 'btn btn-primary btn-lg' %>
-<%= paginate @questions %>
+<%= link_to 'new question', new_question_path, class: 'btn btn-primary btn-lg mb-3' %>
+<%== pagy_bootstrap_nav @pagy %>
 <% @questions.each do |item| %>
-  <article class="card mt-3">
+  <article class="card my-3">
     <div class="card-body">
       <h2><%= item.title %></h2>
       <section class="card-text">
@@ -22,4 +22,4 @@
     </div>
   </article>
 <% end %>
-<%= paginate @questions %>
+<%== pagy_bootstrap_nav @pagy %>

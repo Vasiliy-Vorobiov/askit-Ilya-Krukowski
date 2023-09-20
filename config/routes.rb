@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     resources :answers, except: %i[create destroy]
   end
 
+  resources :users do
+    resources :users, only: %i[create new]
+  end
+
   # get '/questions', to: 'questions#index'
 
   # get 'pages/index' - сгенерировано по умолчанию

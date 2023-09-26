@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   def index
     # @questions = Question.order(created_at: 'DESC').page params[:page]
     @pagy, @questions = pagy Question.order(created_at: 'DESC')
+    @questions = @questions.decorate
   end
 
   def new
@@ -50,8 +51,10 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = @question.decorate
     @answer = @question.answers.build
     @pagy, @answers = pagy @question.answers.order(created_at: 'DESC')
+    @answers = @answers.decorate
     # 3 способа:
     # @answers = @question.answers.order(created_at: 'DESC').page(params[:page]).per(5)
     # @answers = Answer.where(question_id: params[:id]).order created_at: 'DESC'

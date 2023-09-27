@@ -1,7 +1,7 @@
 module Authentication
   extend ActiveSupport::Concern
 
-  # добавить всю эту часть в те классы, где этот модуль был подключен 
+  # добавит всю эту часть в те классы, где этот модуль был подключен 
   included do
 
     private
@@ -14,7 +14,9 @@ module Authentication
       current_user.present?
     end
 
+    def sign_in(user)
+      session[:user_id] = user.id
+    end
     helper_method :current_user, :user_signed_in?
-
   end
 end

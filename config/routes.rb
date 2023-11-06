@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # resources :questions, only: %i[index new edit create update destroy show]
   # сегенерированы все методы
 
-  resources :sessions, only: %i[new create destroy]
+  resource :session, only: %i[new create destroy]
   resources :questions do
     # resources :answers, only: %i[create destroy]
     resources :answers, except: %i[create destroy]

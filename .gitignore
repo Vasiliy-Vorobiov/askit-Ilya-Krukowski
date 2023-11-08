@@ -34,3 +34,16 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+# https://stackoverflow.com/questions/60184159/yarn-v2-gitignore
+		
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored		
+
+.yarn/*
+#!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+/.yarn/cache/**

@@ -35,6 +35,8 @@
 
 /node_modules
 
+/Gemfile.lock
+
 # https://stackoverflow.com/questions/60184159/yarn-v2-gitignore
 		
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored		

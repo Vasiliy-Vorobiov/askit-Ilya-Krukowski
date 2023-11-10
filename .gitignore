@@ -42,6 +42,8 @@
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored		
 
 /yarn.lock
+.pnp.cjs
+.pnp.loader.mjs
 
 .yarn/*
 #!.yarn/cache

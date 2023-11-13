@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :users, only: %i[create new]
+    resources :users, only: %i[create new edit update]
   end
 
   # get '/questions', to: 'questions#index'

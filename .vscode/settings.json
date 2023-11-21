@@ -57,7 +57,7 @@
 "emmet.showSuggestionsAsSnippets": true,
 "emmet.includeLanguages": {"html.erb": "html", "erb": "html"},
 "[erb]": {
-  "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+  "editor.defaultFormatter": "elia.erb-formatter",
   "editor.formatOnSave": true
 },
 "files.associations": {
